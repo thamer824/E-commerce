@@ -22,8 +22,10 @@ app.use('/api',require('./routes/upload'));
 app.use('/api',require('./routes/productRoute'));
 app.use('/api',require('./routes/paymentRoute'));
 
-// hedhi juste bech tchouf fl browser li enti khadamt l app
-
+// // hedhi juste bech tchouf fl browser li enti khadamt l app
+// app.get('/', (req, res) => { 
+//     res.json('heey there i am here ')
+// });
 
 // connect to mongoDb
 const URL = process.env.URL
