@@ -1,0 +1,60 @@
+header {
+    min-height: 70px;
+    width: 100%;
+   display: flex;
+
+   /*  houma hekaa a a a a a a a yrodhom a a a a a
+                                         a a a
+   */
+   flex-wrap: wrap;
+   /* space around thothom binethom espace lkol */
+   justify-content: space-around;  
+   align-items: center;
+   border-bottom: 1px solid #ddd;
+
+}
+header .logo {
+    /* l flex ay item flex trodhom nafs lenght */
+    flex: 1;
+  }
+/* l a hya li taaml l ktiba mtaaa lkool  */
+header a{
+    text-transform: uppercase;
+    color: #555;
+}
+
+header ul li {
+    /* trodhom fard ligne */
+    display: inline-block;
+    /* l opacity l transaprency */
+    opacity: 0.7;
+    padding: 20px
+}
+header ul li:hover {
+   
+    /* l opacity l transaprency */
+    opacity: 1;
+    
+}
+.menu{
+    display: none;
+}
+
+.cart-icon {
+    position: relative;
+    margin-right: 20px;
+}
+
+.cart-icon span{
+    /* top -10px manetha lfok ela 10px */
+    background: crimson;
+    border-radius: 20px;
+    color:white;
+    /* An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed): */
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    /* The CSS padding properties are used to generate space around an element's content, inside of any defined borders. */
+    padding: 5px 7px;
+    font-size:10px;
+}

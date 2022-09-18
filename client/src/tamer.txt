@@ -1,0 +1,128 @@
+usecontext = It can be used together with the useState Hook to share state between deeply nested components 
+more easily than with useState alone.  (https://www.w3schools.com/react/react_usecontext.asp)
+THE PROBLEM : we have many nested components. The component at the top and bottom of the stack need access to 
+the state.
+To do this without Context, we will need to pass the state as "props" through each nested component.
+ This is called "prop drilling".
+ 
+ /* The transform property applies a 2D or 3D transformation to an element. */
+/* maw tnajem taaml tla3 fl css 2 esemi mta3 classes w kol whda tnedilha fi file chouf mta3 l cart  wl detail  */
+
+
+npm install --save --legacy-peer-deps react-paypal-express-checkout
+--legacy-peer-deps causes npm to completely ignore peerDependencies when building a package tree, as in
+ npm versions 3 through 6. If a package cannot be installed because of overly strict peerDependencies that collide,
+  it provides a way to move forward resolving the situation.
+
+
+
+The useHistory hook gives you access to the history instance that you may use to navigate.
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!! Hedi kifech taml fazet l file !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!const hundleUpload = async e =>{
+    e.preventDefault()
+    try {
+        if(!isAdmin) return alert("you are not an admin")
+        const file = e.target.files[0]
+        console.log(file)
+    } catch (error) {
+        alert(error.response.data.msg)
+    }
+
+}
+
+
+
+()=> tabda fi wost onchange bch taml l funciotn mara barka mouch loop
+
+
+
+l emty fragments <></>  houma container tnajem tghot fihom multiple views multiple child rendering manneha
+
+
+
+
+hedi manetha ki tabda l on edit true l input hada ywali disabled matnajem taaml fiih chay
+ <input type="text" name="product_id" id="product_id" required   onChange={handleChangeInput} disabled={onEdit}/>
+
+
+
+
+useEffect(() => {
+          const getCategory = async()=>{
+::::::::::::// ken tansa l await trajaalek promise mouch object wela daata
+            const res = await axios.get('http://localhost:5000/api/category')
+            console.log(res)
+          }
+          getCategory()
+   },[])
+
+
+
+
+
+
+
+
+******************************* Splice javascrip **************************
+
+const removeProduct = id =>{
+  if(window.confirm("Do you really want to Remove this item froom Cart?")){
+    cart.forEach((item,index)=>{
+      
+      if(item._id === id){
+        // splica remove or change elements within an array
+        // l index hoa mnin the tabda tmapi fl array mtaek wl 1 kedech men item theb tremovi
+        cart.splice(index,1)
+      }
+    })
+    setCart([...cart])
+  }
+}***********************************
+
+
+
+
+
+
+ ****************** BEHYA L FAZA *****************************************************************************
+useEffect(()=>{
+       const getTotal = ()=>{
+        // behi lena l accumulator inicial 0 li lota edika w hoa kol ma l current value yetmapa all cart lkol yetzed lel accumulator
+        const total = cart.reduce((accumulator,currentValue)=>{
+              return accumulator + (currentValue.price * currentValue.quantity)
+        },0)
+        setTotal(total)
+       }
+       getTotal()
+  },[])
+
+
+
+
+
+
+
+f Link ki thot Linl =" ./cart "  ===> http://localhost:3000/Products/detail/63076d0ffa27ff5b38481d1e/cart
+w ki thot Link = "/cart" ===> http://localhost:3000/cart
+
+
+ "emmet.includeLanguages": {
+        "javascript":"javascriptreact"
+      }    =====> trodha auto l ktiba tekmel
+
+l createContext tniik f ras
+chouf fazet l globalState mta3 L PRODUCTApi kifech hathom 
+
+useEffect(() => {
+  //Runs on the first render
+  //And any time any dependency value changes
+}, [prop, state]);
+
+
+
+ icons : https://fontawesome.com/search?p=1&q=menu&s=solid%2Cbrands
+
+
+ hedhom l font men goodle = @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
