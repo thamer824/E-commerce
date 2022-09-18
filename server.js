@@ -28,8 +28,8 @@ app.use('/api',require('./routes/paymentRoute'));
 // });
 
 // connect to mongoDb
-const URL = process.env.URL
-mongoose.connect(URL, {
+const MONGODB_URL = process.env.MONGODB_URL
+mongoose.connect(MONGODB_URL, {
     useNewUrlParser: true,   //We pass the useNewUrlParser: true, etc. to mongoose.connect() to avoid the DeprecationWarning.
     useUnifiedTopology: true
 
