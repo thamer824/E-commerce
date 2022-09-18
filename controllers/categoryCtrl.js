@@ -1,7 +1,7 @@
 
-const { reset } = require("nodemon");
+
 const Category = require("../models/categories");
-const Products = require("../models/productModel");
+
 const categoryCtrl = {
 
     getCategories: async (req, res) => {

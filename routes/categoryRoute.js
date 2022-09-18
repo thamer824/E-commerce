@@ -2,7 +2,7 @@ const router = require('express').Router();
 const categoryCtrl = require('../controllers/categoryCtrl')
 const authAdmin = require('../midlleware/authAdmin');
 const auth = require('../midlleware/auth');
-const { route } = require('./userRoute');
+
 
 router.route('/category')
     .get(categoryCtrl.getCategories)
