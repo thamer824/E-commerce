@@ -25,13 +25,13 @@ const userCtrl = {
 
             // Then create jsonwebtoken to authentication
             const accesstoken = createAccessToken({id: newUser._id})
-            const refreshtoken = createRefreshToken({id: newUser._id})
+            // const refreshtoken = createRefreshToken({id: newUser._id})
 
-            res.cookie('refreshtoken', refreshtoken, {
-                httpOnly: true,
-                path: '/user/refresh_token',
-                maxAge: 7*24*60*60*1000 // 7d
-            })
+            // res.cookie('refreshtoken', refreshtoken, {
+            //     httpOnly: true,
+            //     path: '/user/refresh_token',
+            //     maxAge: 7*24*60*60*1000 // 7d
+            // })
 
             res.json({accesstoken})
 
