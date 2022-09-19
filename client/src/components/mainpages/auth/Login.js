@@ -22,7 +22,7 @@ function Login() {
     try {
       
      const {email,password} = user;
-      await axios.post('http://localhost:5000/user/login', {email,password},{ withCredentials: true })
+      await axios.post('http://localhost:5000/user/login', {email,password})
       
         localStorage.setItem('firstLogin', true) // khater ken matrodhech Json sring tarjaalek ka object
         window.location.href = "/"

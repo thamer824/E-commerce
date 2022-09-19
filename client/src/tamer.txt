@@ -9,6 +9,29 @@ To do this without Context, we will need to pass the state as "props" through ea
 /* maw tnajem taaml tla3 fl css 2 esemi mta3 classes w kol whda tnedilha fi file chouf mta3 l cart  wl detail  */
 
 
+
+
+
+What is CORS?
+CORS stands for Cross-Origin Resource Sharing. It allows us to relax the security applied to an API. This is done by bypassing the Access-Control-Allow-Origin headers, which specify which origins can access the API.
+
+In other words, CORS is a browser security feature that restricts cross-origin HTTP requests with other servers and specifies which domains access your resources.
+
+
+
+
+
+CORS package allows you multiple configure and it's very easy to use.
+
+Simple Usage (Enable All CORS Requests)
+app.use(cors()); // hedi allow kol chay
+app.use(cors); hedi lee lezmek ka ta3mel with credentials w kal fazet origin: ......
+
+
+
+
+
+
 npm install --save --legacy-peer-deps react-paypal-express-checkout
 --legacy-peer-deps causes npm to completely ignore peerDependencies when building a package tree, as in
  npm versions 3 through 6. If a package cannot be installed because of overly strict peerDependencies that collide,
