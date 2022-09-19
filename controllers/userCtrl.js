@@ -25,13 +25,13 @@ const userCtrl = {
 
             // Then create jsonwebtoken to authentication
             const accesstoken = createAccessToken({id: newUser._id})
-            // const refreshtoken = createRefreshToken({id: newUser._id})
+            const refreshtoken = createRefreshToken({id: newUser._id})
 
-            // res.cookie('refreshtoken', refreshtoken, {
-            //     httpOnly: true,
-            //     path: '/user/refresh_token',
-            //     maxAge: 7*24*60*60*1000 // 7d
-            // })
+            res.cookie('refreshtoken', refreshtoken, {
+                httpOnly: true,
+                path: '/user/refresh_token',
+                maxAge: 7*24*60*60*1000 // 7d
+            })
 
             res.json({accesstoken})
 
@@ -76,8 +76,9 @@ const userCtrl = {
     refreshToken: (req, res) =>{
         try {
             const rf_token = req.cookies.refreshtoken;
+            console.log("zah")
             if(!rf_token) return res.status(400).json({msg: "Please Login or Register"})
-            
+            console.log("zouuh")
             jwt.verify(rf_token, process.env.REFRESH_TOKEN_SECRET, (err, user) =>{
                 if(err) return res.status(400).json({msg: "Please Can You Login or Register"})
 
