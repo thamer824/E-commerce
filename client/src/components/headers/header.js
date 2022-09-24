@@ -65,7 +65,7 @@ function Header() {
                 
                 
                 {
-                    isLogged ? loggedRouter() : <li><Link to="./Login"> Login  or  Register</Link></li>
+                    isLogged ?  loggedRouter() : <li><Link to="./login"> Login  or  Register</Link></li>
                 }
                 
                 <li onClick={()=> setMenu(!menu)}>
